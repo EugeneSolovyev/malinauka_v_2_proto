@@ -1,0 +1,174 @@
+body {
+    overflow-x: hidden;
+}
+
+.row {
+    margin: 0;
+}
+
+.nav-wrapper {
+    background-color: rgba(16,55,93,1);
+    padding: 0 5%;
+}
+
+.brand-logo {
+    margin-top: 5px;
+    margin-right: 5%;
+}
+
+.logo-malinauka {
+    width: auto !important;
+    height: 54px;
+}
+
+#mobile-demo {
+    z-index: 100;
+}
+
+.button-collapse {
+    overflow: hidden;
+}
+
+.greet-screen {
+    width: 100%;
+    height: calc(100vh - 64px);
+    padding: 0;
+    position: relative;
+}
+
+.greet-screen::after {
+    content: '';
+    display: block;
+    border-top: 10vh solid transparent;
+    border-left: 50vw solid rgba(16, 55, 93, 1);
+    border-right: 50vw solid rgba(16, 55, 93, 1);
+    border-bottom: 0vw solid rgba(16, 55, 93, 1);
+    position: absolute;
+    top: calc(100vh - 10vh - 63px);
+}
+
+.greet-screen h1 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: calc(100vh - 64px);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.news-box {
+    height: 100vh;
+    padding: 0 !important;
+    position: relative;
+}
+
+.container-fluid::before {
+    content: '';
+    display: block;
+    border-top: 10vh solid rgba(16, 55, 93, 1);
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 0vw solid transparent;
+    position: absolute;
+    z-index: 100;
+}
+.card {
+    background-color: rgba(182,219,221,1);
+    margin: 1em;
+    position: absolute;
+    top: 10vh;
+    left: calc(5% - 0.75em);
+    right: calc(5% - 0.75em);
+}
+.card-content {
+	height: 70vh;
+}
+.card-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-button * {
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.slider,
+.slides {
+    background-color: transparent !important;
+}
+
+
+.last-news-header {
+	border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+
+.btn,
+.btn:hover,
+.btn:focus {
+	background-color: rgba(16, 55, 93, 1);
+}
+
+.last-news,
+.nav-button{
+	color: #000;
+}
+
+.modal {
+	color: #000;
+}
+
+.events-box {
+	padding: 0 5% !important;
+}
+
+.map {
+	height: 50vh;
+	background-color: aqua;
+}
+
+.button-down {
+	z-index: 99;
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 90%;
+	left: calc(50% - 20px);
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	color: #fcfdfd;
+	text-shadow: 0 0 20px #000;
+	animation-name: up-and-down;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	cursor: pointer;
+}
+
+#mobile-demo li {
+	width: 100%;
+}
+
+@keyframes up-and-down {
+	0%  {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
