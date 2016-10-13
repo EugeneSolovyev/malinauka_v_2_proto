@@ -14,7 +14,6 @@ ul {
     width: /*354px*/ 100%;
     height: /*calc(227px * 2)*/ 100%;
     margin: 0 auto 2em;
-    box-shadow: 5px 5px 10px #000;
     position: relative;
     overflow: hidden;
     background-color: rgba(16, 55, 93, 1);
@@ -188,7 +187,7 @@ ul {
     background-color: #fefdfd;
     border-radius: 4px;
     position: absolute;
-    top: calc(50% - (23px / 2));
+    top: calc(50% - (23px / 2.5));
     box-shadow: 0 0 5px #000;
 }
 

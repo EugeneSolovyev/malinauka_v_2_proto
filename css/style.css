@@ -4,101 +4,103 @@ body {
 
 .row {
     margin: 0;
+    padding: 0;
+}
+
+.row:nth-child(2) {
+    margin-bottom: 1em;
 }
 
 .nav-wrapper {
-    background-color: rgba(16,55,93,1);
+    background-color: rgba(16, 55, 93, 1);
     padding: 0 5%;
 }
 
-.brand-logo {
-    margin-top: 5px;
+.brand-logo.right {
     margin-right: 5%;
+    width: auto;
+    height: 56px;
 }
 
 .logo-malinauka {
-    width: auto !important;
-    height: 54px;
+    width: auto;
+    height: 50px;
+    margin-top: 6px;
 }
 
-#mobile-demo {
-    z-index: 100;
-}
-
-.button-collapse {
-    overflow: hidden;
-}
-
-.greet-screen {
+#mobile-demo li {
     width: 100%;
-    height: calc(100vh - 64px);
-    padding: 0;
+}
+
+.f-s {
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.greet-screen::after {
+.greet-video {
+    filter: brightness(.7) grayscale(100%);
+}
+
+.f-s h1 {
+    color: rgba(255,255,255,.6);
+    font-weight: 800;
+}
+
+.link-down {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    color: rgba(255, 255, 255, .6);
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: calc(100vh - (60px + 56px));
+    animation: up-and-down 1.5s infinite ease-in-out;
+}
+
+.f-s::after {
     content: '';
     display: block;
+    padding: 0;
+    margin: 0;
     border-top: 10vh solid transparent;
     border-left: 50vw solid rgba(16, 55, 93, 1);
     border-right: 50vw solid rgba(16, 55, 93, 1);
-    border-bottom: 0vw solid rgba(16, 55, 93, 1);
+    border-bottom: 0vh solid rgba(16, 55, 93, 1);
     position: absolute;
-    top: calc(100vh - 10vh - 63px);
-}
-
-.greet-screen h1 {
-    text-align: center;
-    vertical-align: middle;
-    line-height: calc(100vh - 64px);
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin: 0;
+    top: calc(100vh - 10vh - 55px);
 }
 
 .news-box {
     height: 100vh;
-    padding: 0 !important;
     position: relative;
 }
 
-.container-fluid::before {
+.news-box::before {
     content: '';
     display: block;
     border-top: 10vh solid rgba(16, 55, 93, 1);
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-bottom: 0vw solid transparent;
+    border-bottom: 0vh solid transparent;
     position: absolute;
-    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
 .card {
     background-color: rgba(182,219,221,1);
-    margin: 1em;
     position: absolute;
     top: 10vh;
-    left: calc(5% - 0.75em);
-    right: calc(5% - 0.75em);
-}
-.card-content {
-	height: 70vh;
-}
-.card-action {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.nav-button * {
-    padding: 0 10px;
-    text-transform: uppercase;
+    left: 5%;
+    right: 5%;
 }
 
 .slider,
@@ -106,69 +108,105 @@ body {
     background-color: transparent !important;
 }
 
-
-.last-news-header {
-	border-bottom: 1px solid rgba(0,0,0,.5);
+.card-content {
+    height: 75vh;
 }
 
-
-.btn,
-.btn:hover,
-.btn:focus {
-	background-color: rgba(16, 55, 93, 1);
+.last-news {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: transparent;
 }
 
-.last-news,
-.nav-button{
-	color: #000;
+.news {
+    margin: 1em 0;
+    padding: 0;
+    clear: both;
 }
 
-.modal {
-	color: #000;
+.news p {
+    text-align: justify;
+}
+
+.news-content {
+    width: 65%;
+    height: auto;
+    float: left;
+    padding-right: 1em;
+}
+
+.news-content .btn {
+    margin: 1em 0;
+}
+
+.news-img {
+    width: 35% !important;
+    float: left;
+    padding-left: 1em;
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-action * {
+    display: inline-block;
+    padding: 0 1em;
+    color: rgba(0, 0, 0, .9);
+    cursor: pointer;
 }
 
 .events-box {
-	padding: 0 5% !important;
+    padding: 0 5% !important;
+}
+
+.calendar-box {
+    padding: 0 !important;
 }
 
 .map {
-	height: 50vh;
-	background-color: aqua;
+    padding-left: 1em !important;
+    background-color: yellow;
 }
 
-.button-down {
-	z-index: 99;
-	display: block;
-	width: 40px;
-	height: 40px;
-	position: absolute;
-	top: 90%;
-	left: calc(50% - 20px);
-	font-size: 40px;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 40px;
-	color: #fcfdfd;
-	text-shadow: 0 0 20px #000;
-	animation-name: up-and-down;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-	cursor: pointer;
+.footer {
+    background-color: rgba(16, 55, 93, 1);
+    padding: 0 5%;
+    clear: both;
+    text-align: center;
 }
 
-#mobile-demo li {
-	width: 100%;
+.info,
+.partnership {
+    width: 50%;
+    float: left;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes up-and-down {
-	0%  {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+    0%  {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media all and (max-width: 800px) {
+    .news-content,
+    .news-img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
